@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+	</head>
+	<body>
+		<h1>THIS IS HOME PAGE!</h1>
+		<h1>{{hitere}}</h1>
+
+		<form class="" action="{% url 'count' %}">
+			{% csrf_token %}
+			<textarea name="fulltext" rows="10" cols="40"></textarea>
+			<br>
+			<input type="submit" name="" value="Post Me">
+		</form>
+
+		<h2>
+				<ul> <a href="{% url 'home' %}">Home</a> </ul>
+				<ul> <a href="{% url 'gallery' %}">Gallery</a> </ul>
+				<ul> <a href="{% url 'kontakt'%}">Kontakt</a> </ul>
+				<ul> <a href="{% url 'warto' %}">Warto</a> </ul>
+				<ul> <a href="{% url 'about' %}">About</a> </ul>
+		</h2>
+	</body>
+</html>
